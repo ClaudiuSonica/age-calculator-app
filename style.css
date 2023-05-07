@@ -38,7 +38,7 @@ footer {
 
 .container {
   width: 70%;
-  max-width: 900px;
+  max-width: 600px;
   background-color: #fff;
   border-radius: 10px;
   border-bottom-right-radius: 30%;
@@ -70,7 +70,7 @@ footer {
 
 .input {
   color: hsl(0, 0%, 86%);
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 700;
   width: 80%;
   padding: .25em;
@@ -82,13 +82,13 @@ footer {
 .input__title {
   text-transform: uppercase;
   color: hsl(0, 1%, 44%);
-  font-size: .5em;
+  font-size: .5rem;
   letter-spacing: 0.4em;
 }
 
 .text {
   color: hsl(0, 100%, 67%);
-  font-size: .5em;
+  font-size: .5rem;
   font-weight: 400;
   font-style: italic;
   display: none;
@@ -100,12 +100,89 @@ footer {
 }
 
 .result__text {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: 800;
   font-style: italic;
 }
 
 .footer {
   font-family: sans-serif;
-  font-size: .7em;
+  font-size: .7rem;
+}
+
+@media (max-width: 700px) {
+
+  hr {
+    display: none;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  .container {
+    max-width: 300px;
+    width: 90%;
+    padding: 1em;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .input {
+    font-size: 1rem;
+    width: 95%;
+  }
+  
+  .input__title {
+    font-size: .7rem;
+  }
+  .line__break {
+    position: relative;
+  }
+  .img__main {
+    height: 40px;
+    width: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  .img__main::before,
+  .img__main::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: hsl(0, 0%, 86%);
+    width: 43%;
+    top: 40%;
+  }
+
+  .img__main::after {
+    left: 0;
+  }
+
+  .img__main::before {
+    right: 0;
+  }
+
+  .result__text {
+    font-size: 2rem;
+  }
+
+  .footer {
+    font-size: .5rem;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
