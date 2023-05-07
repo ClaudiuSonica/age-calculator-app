@@ -1,0 +1,49 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 86%);
+}
+
+hr {
+  display: inline-block;
+}
+
+.container {
+  width: 50%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  border-bottom-right-radius: 30%;
+  padding: 2em;
+}
+
+.arrow__img {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.input {
+  width: 70%;
+  padding: .5em;
+  margin: .5em 0;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 5px;
+}
+
+.age__calculator {
+  display: flex;
+
+}
