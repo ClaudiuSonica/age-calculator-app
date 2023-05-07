@@ -16,30 +16,32 @@
       <div class="age__calculator">
         <div class="col">
           <h5 class="input__title">day</h5>
-          <input class="input" type="text" name="birthday" value="DD">
+          <input id="day" class="input" type="text" name="birthday" placeholder="DD">
           <p class="text">This field is required</p>
         </div>
         <div class="col">
           <h5 class="input__title">month</h5>
-          <input class="input" type="text" name="birthday" value="MM">
+          <input id="month" class="input" type="text" name="birthday" placeholder="MM">
           <p class="text">This field is required</p>
         </div>
         <div class="col">
           <h5 class="input__title">year</h5>
-          <input class="input" type="text" name="birthday" value="YYYY">
+          <input id="year" class="input" type="text" name="birthday" placeholder="YYYY">
           <p class="text">This field is required</p>
         </div>
       </div>
     </div>
       <div class="line__break">
         <hr>
-        <div class="img__main"><img src="images/icon-arrow.svg" alt="arrow image" class="arrow__img"></div>
+        <div class="img__main">
+          <button id="btn" class="btn" type="submit"><img class="arrow__img" src="images/icon-arrow.svg" alt="arrow icon"></button>
+        </div>
       </div>
       <div class="wrapper">
         <div class="result">
-          <p class="result__text"><span>--</span>years</p>
-          <p class="result__text"><span>--</span>months</p>
-          <p class="result__text"><span>--</span>days</p>
+          <p class="result__text"><span>- -</span><em id="days">years</em></p>
+          <p class="result__text"><span>- -</span><em id="months">months</em></p>
+          <p class="result__text"><span>- -</span><em id="years">days</em></p>
         </div>
       </div>
 </main>

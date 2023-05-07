@@ -63,13 +63,23 @@ footer {
   display: inline-block;
 }
 
+.btn {
+  border: none;
+}
+
+.arrow__img:hover,
+.arrow__img:focus {
+  background-color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+
 .age__calculator {
   display: flex;
   justify-content: space-between;
 }
 
 .input {
-  color: hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 8%);
   font-size: 2rem;
   font-weight: 700;
   width: 80%;
@@ -77,6 +87,12 @@ footer {
   margin: .25em 0;
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 5px;
+}
+
+.input:hover,
+.input:focus {
+  border: 3px solid hsl(0, 0%, 86%);
+  cursor: pointer;
 }
 
 .input__title {
