@@ -4,23 +4,12 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   display: grid;
   place-items: center;
   height: 100vh;
   background-color: hsl(0, 0%, 86%);
-}
-
-hr {
-  display: inline-block;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid hsl(0, 0%, 86%);
 }
 
 span {
@@ -47,42 +36,41 @@ footer {
 
 .wrapper {
   width: 85%;
-  text-align: left;
-}
-
-.line__break {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.arrow__img {
-  background-color: hsl(259, 100%, 65%);
-  padding: .5em;
-  border-radius: 50%;
-  display: inline-block;
 }
 
 .btn {
-  border: none;
+  grid-column: 1/-1;
+  place-self: end;
+  border: 0;
+  background: url(images/icon-arrow.svg) center/50% no-repeat;
+  background-color: hsl(259, 100%, 65%);
+  color: transparent;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 5rem;
 }
 
-.arrow__img:hover,
-.arrow__img:focus {
+.btn:hover,
+.btn:focus {
   background-color: hsl(0, 0%, 8%);
   cursor: pointer;
 }
 
+.btn:disabled {
+  background-color: hsl(0, 1%, 44%);
+}
+
 .age__calculator {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5em;
 }
 
 .input {
   color: hsl(0, 0%, 8%);
   font-size: 2rem;
   font-weight: 700;
-  width: 80%;
+  width: 100%;
   padding: .25em;
   margin: .25em 0;
   border: 1px solid hsl(0, 0%, 86%);
@@ -102,17 +90,23 @@ footer {
   letter-spacing: 0.4em;
 }
 
-.text {
-  color: hsl(0, 100%, 67%);
+
+
+.error__display {
+  margin-top: 0.5rem;
   font-size: .5rem;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  color: hsl(0, 100%, 67%);
+}
+
+.error__display:empty {
   display: none;
 }
 
-.error__display {
-  color: hsl(0, 100%, 67%);
-  display: block;
+.error__input {
+  border: 3px solid hsl(0, 100%, 67%);
 }
 
 .result__text {
@@ -126,19 +120,18 @@ footer {
   font-size: .7rem;
 }
 
-@media (max-width: 700px) {
+.col:has(small:not(:empty)) label{
+  color: hsl(0, 100%, 67%);
+}
+.col:has(small:not(:empty)) input {
+  border-color: hsl(0, 100%, 67%);
+}
 
-  hr {
-    display: none;
-  }
+@media (max-width: 700px) {
 
   body {
     display: grid;
     place-items: center;
-  }
-
-  img {
-    width: 30px;
   }
 
   .container {
@@ -159,37 +152,9 @@ footer {
   .input__title {
     font-size: .7rem;
   }
-  .line__break {
-    position: relative;
-  }
-  .img__main {
-    height: 40px;
-    width: 40px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    text-align: center;
-  }
 
-  .img__main::before,
-  .img__main::after {
-    content: "";
-    position: absolute;
-    margin: auto;
-    height: 1px;
-    background: hsl(0, 0%, 86%);
-    width: 43%;
-    top: 40%;
-  }
-
-  .img__main::after {
-    left: 0;
-  }
-
-  .img__main::before {
-    right: 0;
+  .btn {
+    width: 2rem;
   }
 
   .result__text {

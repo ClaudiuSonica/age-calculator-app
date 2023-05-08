@@ -13,37 +13,32 @@
 <body>
 <main class="main container">
     <div class="wrapper">
-      <div class="age__calculator">
+      <form id="form" autocomplete="off" novalidate class="age__calculator">
         <div class="col">
-          <h5 class="input__title">day</h5>
-          <input id="day" class="input" type="text" name="birthday" placeholder="DD">
-          <p class="text">This field is required</p>
+          <label class="input__title">day</label>
+          <input id="day" class="input" type="number" name="day" placeholder="DD" min="1" max="31" required>
+          <small class="error__display"></small>
         </div>
         <div class="col">
-          <h5 class="input__title">month</h5>
-          <input id="month" class="input" type="text" name="birthday" placeholder="MM">
-          <p class="text">This field is required</p>
+          <label class="input__title">month</label>
+          <input id="month" class="input" type="number" name="month" placeholder="MM" min="1" max="12" required>
+          <small class="error__display"></small>
         </div>
         <div class="col">
-          <h5 class="input__title">year</h5>
-          <input id="year" class="input" type="text" name="birthday" placeholder="YYYY">
-          <p class="text">This field is required</p>
+          <label class="input__title">year</label>
+          <input id="year" class="input" type="number" name="year" placeholder="YYYY" min="1900" required>
+          <small class="error__display"></small>
         </div>
+        <button id="submit" class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="wrapper">
+      <div class="result">
+        <p class="result__text"><span id="days">- -</span>years</p>
+        <p class="result__text"><span id="months">- -</span>months</p>
+        <p class="result__text"><span id="years">- -</span>days</p>
       </div>
     </div>
-      <div class="line__break">
-        <hr>
-        <div class="img__main">
-          <button id="btn" class="btn" type="submit"><img class="arrow__img" src="images/icon-arrow.svg" alt="arrow icon"></button>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="result">
-          <p class="result__text"><span>- -</span><em id="days">years</em></p>
-          <p class="result__text"><span>- -</span><em id="months">months</em></p>
-          <p class="result__text"><span>- -</span><em id="years">days</em></p>
-        </div>
-      </div>
 </main>
 
 <script src="index.js"></script>  
